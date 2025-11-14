@@ -1,5 +1,11 @@
 spring:
   application:
     name: customer-service
+
+customer:
+  params:
+    x: 11
+    y: 22
+
 server:
   port: 8081
