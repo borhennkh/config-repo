@@ -1,3 +1,8 @@
+global:
+  params:
+    p1: 555
+    p2: 777
+
 spring:
   application:
     name: config-repo-global
