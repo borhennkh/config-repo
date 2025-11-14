@@ -1,33 +1,17 @@
-# customer-service.yml — keys specific for the Customer service
-spring:
-  application:
-    name: customer-service
+customer:
+  params:
+    p1: 555
+    p7: 0
 
-server:
-  port: 8081
-
-# Data source values (these will be used by the Customer service)
 spring:
   datasource:
-    url: jdbc:h2:mem:customer_db
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    url: jdbc:h2:mem:customers-db
+  data:
+    rest:
+      base-path: /api
   jpa:
     hibernate:
       ddl-auto: create
-    show-sql: true
 
-# Expose actuator information (so you can inspect config at runtime)
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,env,metrics
-  endpoint:
-    health:
-      show-details: always
-
-# Optional: any custom properties your app needs
-app:
-  welcome: "Welcome to Customer Service (from config server)"
+server:
+  port: 8081
